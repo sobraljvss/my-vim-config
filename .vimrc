@@ -11,9 +11,6 @@
 
 "GENERAL CONFIGURATIONS------------------------------------------------{{{
 
-set t_ZH=[3m
-set t_ZR=[23m
-
 " Disable compatibility with Vi
 set nocompatible
 
@@ -37,9 +34,7 @@ filetype indent on
 
 " Syntax highlight
 syntax on
-
-" Color scheme
-colorscheme onedark
+syntax enable
 
 " Relative line enumeration
 set relativenumber
@@ -101,12 +96,16 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'w0rp/ale'
 	Plug 'prettier/vim-prettier'
-	Plug 'neoclide/coc.nvim'
+	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 	Plug 'joshdick/onedark.vim'
+	Plug 'dracula/vim', { 'as': 'dracula' }
 	Plug 'sheerun/vim-polyglot'
 	Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
+
+" Color scheme
+colorscheme molokai 
 
 " }}}
 
